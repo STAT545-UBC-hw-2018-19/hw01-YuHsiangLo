@@ -1,6 +1,6 @@
 HW01 Gapminder
 ================
-Roger Yu-Hsiang Lo
+85868164 Roger Yu-Hsiang Lo
 2018-09-15
 
 Set-up
@@ -67,7 +67,7 @@ boxplot(lifeExp ~ continent, data = gapminder_2007)
 
 ![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
--   Draw a scatter plot to see if there is correlation between GDP per capita and life expectancy for 2007 data.
+-   Draw a scatter plot to see if there is correlation between GDP per capita and life expectancy for the 2007 data.
 
 ``` r
 plot(x = gapminder_2007$gdpPercap, y = gapminder_2007$lifeExp, xlab = 'GDP per capita', ylab = 'Life expectancy')
@@ -78,8 +78,11 @@ plot(x = gapminder_2007$gdpPercap, y = gapminder_2007$lifeExp, xlab = 'GDP per c
 -   How life expectancy in Taiwan changed over years.
 
 ``` r
+# Create a new data frame that includes only the data from Taiwan
 gapminder_taiwan = gapminder[gapminder$country == 'Taiwan',]
-plot(x = gapminder_taiwan$year, y = gapminder_taiwan $ lifeExp, xlab = 'Year', ylab = 'Life expectancy')
+
+# Draw a scatter plot
+plot(x = gapminder_taiwan$year, y = gapminder_taiwan$lifeExp, xlab = 'Year', ylab = 'Life expectancy')
 ```
 
 ![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-6-1.png)
